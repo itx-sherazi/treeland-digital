@@ -87,6 +87,7 @@
 }
 
 html {
+  overflow-x: clip;
   scroll-behavior: smooth;
   scroll-padding-top: 5.5rem;
 }
@@ -96,6 +97,7 @@ body {
   color: var(--color-ink);
   font-family: var(--font-body), system-ui, sans-serif;
   overflow-x: hidden;
+  overflow-x: clip;
 }
 
 ::selection {
@@ -229,8 +231,9 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  .reveal {
-    opacity: 1;
-    transform: none;
+  .reveal,
+  .reveal[data-variant] {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
